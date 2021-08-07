@@ -7,6 +7,10 @@ const bcrypt = require("bcrypt");
 const Users = require("./db/User");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Hello there");
+});
+
 //authenticate user
 app.post("/signup", async (req, res) => {
   const userID = req.body.uid;
